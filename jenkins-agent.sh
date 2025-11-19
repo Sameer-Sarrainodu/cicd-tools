@@ -23,6 +23,13 @@ dnf module enable nodejs:20 -y
 dnf install nodejs -y
 yum install zip -y
 
+# python
+yum install -y python3-devel gcc make openssl-devel libffi-devel
+python3 -m pip install --user --upgrade pip wheel
+
+# maven
+yum install maven -y
+
 # docker
 yum install -y yum-utils
 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
